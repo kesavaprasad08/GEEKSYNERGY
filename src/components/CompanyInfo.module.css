@@ -10,3 +10,6 @@
   color: white;
   align-self: flex-end;
 }
+.CompanyInfo button:hover{
+  background-color:rgb(254, 82, 82) ;
+}

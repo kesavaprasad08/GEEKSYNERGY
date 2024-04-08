@@ -34,6 +34,7 @@
     color: white;
 }
 .buttons p {
+    font-size: smaller;
     /* margin-top: 15px0; */
     cursor: pointer;
     text-decoration: none;

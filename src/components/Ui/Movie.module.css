@@ -1,32 +1,55 @@
 .container {
   display: flex;
-
-  /* height: 350px; */
+  flex-wrap: wrap;
+  border-bottom: 1px solid gray;
+  background-color: white;
   width: 350px;
   flex-direction: column;
   align-items: center;
-  background-color: aquamarine;
-  border-bottom: solid black;
-  margin-left: 15px;
+  font-size: smaller;
+  padding: 15px 10px;
 }
 .Movie {
-  /* padding: 15px; */
   display: flex;
 }
 
 .Movie img {
-  height: 145px;
+  margin-bottom: 15px;
   width: 100px;
 }
 
 .container button {
-    border-radius: 5px;
+  border-radius: 5px;
   background-color: #0d6efd;
   border: solid #0d6efd;
   color: white;
   padding: 5px;
   width: 80%;
 }
-.container p{
-    font-size: smaller;
+.container p {
+  font-size: smaller;
+}
+
+.details {
+  word-wrap: break-word;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 7px;
+}
+.details p {
+  width: 150px;
+}
+.vote {
+  margin: 5px;
+  text-align: center;
+}
+
+.arrow {
+  font-size: 50px;
+}
+
+.title {
+  font-weight: bolder;
 }

@@ -38,7 +38,7 @@ const Login = (props) => {
         {errorMessage !== "" && (
           <p className={classes.errorMessage}>{errorMessage}</p>
         )}
-        <p>Already have an account ? Sign in </p>
+        <div className={classes.signIn} > <p>Already have an account?</p><pre> </pre><p className={classes.link} onClick={()=>{navigate('/')}}>Sign Up </p></div> 
       </form>
     </div>
   );

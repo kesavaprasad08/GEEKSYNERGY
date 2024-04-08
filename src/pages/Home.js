@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header.js/Header";
 import axios from "axios";
 import Movie from "../components/Ui/Movie";
+import classes from "./Home.module.css";
 
 const Home = (props) => {
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const parameter = {
       category: "movies",
@@ -16,6 +18,7 @@ const Home = (props) => {
       "Access-Control-Allow-Origin": "*",
     };
     const fetchData = async () => {
+      setLoading(true);
       try {
         const response = await axios.post(
           "https://hoblist.com/api/movieList",
@@ -26,15 +29,18 @@ const Home = (props) => {
       } catch (error) {
         console.error(error.message);
       }
+
+      setLoading(false);
     };
 
     fetchData();
   }, []);
-  console.log(movies)
-  const moviesList = movies.map(mov => <Movie key={mov._id} data={mov} />) 
+  const moviesList = movies.map((mov) => <Movie key={mov._id} data={mov} />);
   return (
-    <div>
-      <Header onOpen={props.onOpen} />
+    <div className={classes.home}>
+      <Header onOpen={props.onOpen} current='home' />
+      <p>Popular Movies | Kannada</p>
+      {loading && <p>Loading...</p>}
       {moviesList}
     </div>
   );

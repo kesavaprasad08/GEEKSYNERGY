@@ -1,8 +1,9 @@
 .SignUp {
+    height: 635px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 .SignUpForm {
     display: flex;
@@ -27,7 +28,7 @@
     border-color: rgb(222, 222, 222);
     border: .1px solid;
     border-radius: 5px;
-    width: 275px;
+    width: 270px;
     padding: 10px;
     margin-bottom: 10px;
 
@@ -47,10 +48,18 @@
     background-color: #5d85c1;
 }
 
-.SignUpForm p{
-    /* padding-top: 25px; */
-}
 
 .errorMessage{
     color: red;
 }
+
+.signIn{
+    display: flex;
+  }
+  .link{
+    color: blue;
+  }
+  .link:hover{
+   text-decoration: underline;
+    color: blue;
+  } 
