@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Route } from "react-router-dom";
+import { Routes } from "react-router-dom";
+
+import "./App.css";
+// import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showInfo,setShowInfo]=useState(false);
+
+  const ShowInfoHandler=()=>{
+    setShowInfo(true)
+  }
+const hideInfoHandler=()=>{
+  setShowInfo(false);
+}
+
+  const loginHandler = () => {
+    setIsLoggedIn(true);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<SignUp onSignUp={loginHandler} />}></Route>
+        <Route
+          path="/login"
+          element={<Login onLogin={loginHandler} />}
+        ></Route>
+        {isLoggedIn && <Route path="/home" element={<Home />}></Route>}
+      </Routes>
     </div>
   );
 }
