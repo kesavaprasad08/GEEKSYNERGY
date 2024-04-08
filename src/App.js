@@ -11,7 +11,7 @@ import CompanyInfo from "./components/CompanyInfo";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [showInfo,setShowInfo]=useState(true);
+  const [showInfo,setShowInfo]=useState(false);
 
   const ShowInfoHandler=()=>{
     setShowInfo(true)
