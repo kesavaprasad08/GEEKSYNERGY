@@ -7,10 +7,11 @@ import "./App.css";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import CompanyInfo from "./components/CompanyInfo";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [showInfo,setShowInfo]=useState(false);
+  const [showInfo,setShowInfo]=useState(true);
 
   const ShowInfoHandler=()=>{
     setShowInfo(true)
@@ -24,13 +25,14 @@ const hideInfoHandler=()=>{
   };
   return (
     <div className="App">
+      {showInfo && <CompanyInfo  onClose={hideInfoHandler}/>}
       <Routes>
-        <Route path="/" element={<SignUp onSignUp={loginHandler} />}></Route>
+        <Route path="/" element={<SignUp onSignUp={loginHandler} onOpen={ShowInfoHandler} />}></Route>
         <Route
           path="/login"
-          element={<Login onLogin={loginHandler} />}
+          element={<Login onLogin={loginHandler} onOpen={ShowInfoHandler} />}
         ></Route>
-        {isLoggedIn && <Route path="/home" element={<Home />}></Route>}
+        {isLoggedIn && <Route path="/home" element={<Home onOpen={ShowInfoHandler} />}></Route>}
       </Routes>
     </div>
   );

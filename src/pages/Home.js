@@ -1,8 +1,8 @@
 import Header from "../components/Header.js/Header";
 
-const Home = ()=>{
+const Home = (props)=>{
     return <div>
-        <Header />
+        <Header  onOpen={props.onOpen}/>
     </div>
 }
 

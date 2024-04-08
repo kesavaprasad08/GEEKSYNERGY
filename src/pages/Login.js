@@ -25,7 +25,7 @@ const Login = (props) => {
 
   return (
     <div className={classes.Login}>
-      <Header current='login' />
+      <Header current='login' onOpen={props.onOpen} />
       <form className={classes.loginForm} onSubmit={loginHandler}>
         <h2>Login</h2>
         <div>

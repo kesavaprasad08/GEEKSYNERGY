@@ -27,7 +27,7 @@ const SignUp = (props) => {
 
   return (
     <div className={classes.SignUp}>
-      <Header current='signup' />
+      <Header current='signup' onOpen={props.onOpen}/>
       <form className={classes.SignUpForm} onSubmit={signUpHandler}>
         <h2>Create an Account</h2>
         <input name='name' type="text" placeholder="Enter your Name" required />

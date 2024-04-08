@@ -1,0 +1,12 @@
+.CompanyInfo {
+  display: flex;
+  flex-direction: column;
+}
+.CompanyInfo button {
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: solid rgb(255, 29, 29);
+  background-color: rgb(255, 29, 29);
+  color: white;
+  align-self: flex-end;
+}

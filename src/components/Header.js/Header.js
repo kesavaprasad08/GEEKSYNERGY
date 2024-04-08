@@ -10,7 +10,7 @@ const Header = (props) => {
       <div className={classes.buttons}>
           {current==='login' && <p onClick={()=>{navigate('/')}}>Sign-Up</p>}
           {current==='signup' && <p onClick={()=>{navigate('/login')}}>Login</p>}
-        <p>Company info </p>
+        <p onClick={props.onOpen}>Company info </p>
       </div>
     </div>
   );
