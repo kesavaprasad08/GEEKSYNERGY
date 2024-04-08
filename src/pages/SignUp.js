@@ -59,7 +59,7 @@ const SignUp = (props) => {
           required
         ></input>
 
-        <button type="submit">Login </button>
+        <button type="submit">Sign Up </button>
         {errorMessage !== "" && (
           <p className={classes.errorMessage}>{errorMessage}</p>
         )}

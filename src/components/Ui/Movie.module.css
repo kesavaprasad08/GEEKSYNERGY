@@ -20,8 +20,8 @@
 
 .container button {
   border-radius: 5px;
-  background-color: #0d6efd;
-  border: solid #0d6efd;
+  background-color: #4690ff;
+  border: solid #4690ff;
   color: white;
   padding: 5px;
   width: 80%;
@@ -51,5 +51,9 @@
 }
 
 .title {
+
   font-weight: bolder;
+}
+.votes {
+  color: rgb(39, 93, 114);
 }

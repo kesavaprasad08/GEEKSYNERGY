@@ -26,6 +26,7 @@ const Home = (props) => {
           { headers }
         );
         setMovies(response.data.result);
+        console.log(response.data.result)
       } catch (error) {
         console.error(error.message);
       }
@@ -39,7 +40,7 @@ const Home = (props) => {
   return (
     <div className={classes.home}>
       <Header onOpen={props.onOpen} current='home' />
-      <p>Popular Movies | Kannada</p>
+      <p className={classes.heading}>Popular Movies | Kannada</p>
       {loading && <p>Loading...</p>}
       {moviesList}
     </div>

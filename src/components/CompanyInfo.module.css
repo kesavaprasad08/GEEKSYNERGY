@@ -3,6 +3,7 @@
   flex-direction: column;
 }
 .CompanyInfo button {
+  cursor: pointer;
   border-radius: 5px;
   padding: 5px 10px;
   border: solid rgb(255, 29, 29);
@@ -12,4 +13,5 @@
 }
 .CompanyInfo button:hover{
   background-color:rgb(254, 82, 82) ;
+  border: solid rgb(254, 82, 82);
 }

@@ -29,16 +29,16 @@ const Login = (props) => {
       <form className={classes.loginForm} onSubmit={loginHandler}>
         <h2>Login</h2>
         <div>
-          <input name="email" placeholder="Enter E-Mail"></input>
+          <input type="email" name="email" placeholder="Enter E-Mail" required></input>
         </div>
         <div>
-          <input name="password" placeholder="Enter Password"></input>
+          <input type="password" name="password" placeholder="Enter Password" required></input>
         </div>
         <button type="submit">Login </button>
         {errorMessage !== "" && (
           <p className={classes.errorMessage}>{errorMessage}</p>
         )}
-        <div className={classes.signIn} > <p>Already have an account?</p><pre> </pre><p className={classes.link} onClick={()=>{navigate('/')}}>Sign Up </p></div> 
+        <div className={classes.signIn} > <p>Don't have an account?</p><pre> </pre><p className={classes.link} onClick={()=>{navigate('/')}}>Sign Up </p></div> 
       </form>
     </div>
   );

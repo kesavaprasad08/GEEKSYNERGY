@@ -33,13 +33,16 @@ const Movie = (props) => {
         <img src={props.data.poster} alt={props.data.title} />
 
         <div className={classes.details}>
-          <p className={classes.title}>{props.data.title}</p>
+          <h3 className={classes.title}>{props.data.title}</h3>
           <p>Genre: {props.data.genre}</p>
           <p>Director: {props.data.director}</p>
           <p>Starring: {props.data.stars}</p>
           <p>
             {props.data.runtime || 161} mins | {props.data.language} |{" "}
             {formattedDate}
+          </p>
+          <p className={classes.votes}>
+            {props.data.pageViews} views | Voted by {props.data.totalVoted} People
           </p>
         </div>
       </div>
