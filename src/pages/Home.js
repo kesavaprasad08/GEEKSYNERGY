@@ -26,7 +26,7 @@ const Home = (props) => {
           { headers }
         );
         setMovies(response.data.result);
-        console.log(response.data.result)
+        console.log(response.data.result);
       } catch (error) {
         console.error(error.message);
       }
@@ -39,7 +39,7 @@ const Home = (props) => {
   const moviesList = movies.map((mov) => <Movie key={mov._id} data={mov} />);
   return (
     <div className={classes.home}>
-      <Header onOpen={props.onOpen} current='home' />
+      <Header onOpen={props.onOpen} current="home" />
       <p className={classes.heading}>Popular Movies | Kannada</p>
       {loading && <p>Loading...</p>}
       {moviesList}

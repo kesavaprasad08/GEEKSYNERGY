@@ -23,7 +23,7 @@ const SignUp = (props) => {
         JSON.stringify({ name, phone, profession, email, password })
       );
       props.onSignUp();
-      navigate('/home')
+      navigate("/home");
     }
   };
 

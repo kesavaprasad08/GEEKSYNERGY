@@ -42,7 +42,8 @@ const Movie = (props) => {
             {formattedDate}
           </p>
           <p className={classes.votes}>
-            {props.data.pageViews} views | Voted by {props.data.totalVoted} People
+            {props.data.pageViews} views | Voted by {props.data.totalVoted}{" "}
+            People
           </p>
         </div>
       </div>

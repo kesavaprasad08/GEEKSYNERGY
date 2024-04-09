@@ -25,20 +25,42 @@ const Login = (props) => {
 
   return (
     <div className={classes.Login}>
-      <Header current='login' onOpen={props.onOpen} />
+      <Header current="login" onOpen={props.onOpen} />
       <form className={classes.loginForm} onSubmit={loginHandler}>
         <h2>Login</h2>
         <div>
-          <input type="email" name="email" placeholder="Enter E-Mail" required></input>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter E-Mail"
+            required
+          ></input>
         </div>
         <div>
-          <input type="password" name="password" placeholder="Enter Password" required></input>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            required
+          ></input>
         </div>
         <button type="submit">Login </button>
         {errorMessage !== "" && (
           <p className={classes.errorMessage}>{errorMessage}</p>
         )}
-        <div className={classes.signIn} > <p>Don't have an account?</p><pre> </pre><p className={classes.link} onClick={()=>{navigate('/')}}>Sign Up </p></div> 
+        <div className={classes.signIn}>
+          {" "}
+          <p>Don't have an account?</p>
+          <pre> </pre>
+          <p
+            className={classes.link}
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Sign Up{" "}
+          </p>
+        </div>
       </form>
     </div>
   );
