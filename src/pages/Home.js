@@ -40,7 +40,7 @@ const Home = (props) => {
   return (
     <div className={classes.home}>
       <Header onOpen={props.onOpen} current="home" />
-      <p className={classes.heading}>Popular Movies | Kannada</p>
+      {/* <p className={classes.heading}>Popular Movies | Kannada</p> */}
       {loading && <p>Loading...</p>}
       {moviesList}
     </div>
